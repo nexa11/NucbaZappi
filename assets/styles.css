@@ -120,7 +120,7 @@ main {
     gap: 5px;
     border-radius: 15px;
     align-items: center;
-    justify-content: center;
+    /* justify-content: space-between; */
 }
 
 .info-card img {
@@ -145,6 +145,11 @@ main {
     font-weight: 800;
 }
 
+.info.bot {
+    display: flex;
+    justify-content: space-between;
+}
+
 .info-card span {
     font-weight: 800;
     font-size: 19px;
@@ -154,8 +159,7 @@ main {
     background-clip: text;
 }
 
-.btn-agregar {
-    
+.btn-agregar {    
     width: 85px;
     height: 29px;
     background: linear-gradient(to right, #ffa100, #fb103d);
@@ -292,14 +296,14 @@ footer span {
     top: 65px;
     right: 0;
     padding: 50px 30px;
-    background: linear-gradient(to top, var(--primary), var(--background));
+    background: linear-gradient(to top, var(--bgn-card), var(--background));
     border-left: 1px solid var(--nav-bg);
     display: flex;
     flex-direction: column;
     gap: 30px;
     height: calc( 100vh - 65px );
     overflow-y: scroll;
-    /* display: none; */
+    display: none;
     z-index: 2;
 }
 
@@ -402,7 +406,11 @@ footer span {
 }
 
 .cart-total span {
-    color: var(--text-grey);
+    color: var(--secondary);
     font-weight: 800;
     font-size: 18px;
+}
+
+#cart-toggle:checked + .cart {
+    display: flex;
 }
